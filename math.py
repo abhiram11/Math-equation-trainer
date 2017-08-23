@@ -13,7 +13,7 @@ bias = tf.Variable(tf.zeros([1]))
 
 z_pred = wx*x + wy*y + bias
 
-loss = tf.reduce_mean(tf.square(z_pred-z))
+loss = tf.reduce_mean(tf.square(z_pred-z)) #reduces the input value, here the square of diff, SAME AS NP.MEAN
 optimizer = tf.train.GradientDescentOptimizer(0.2) #learning rate
 
 train = optimizer.minimize(loss)
